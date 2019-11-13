@@ -1,0 +1,70 @@
+
+{
+	"name": "DupontVirtualLibrary",
+  "services": [
+    {
+      "type": "endpoint",
+      "name": "development",
+      "endpoint": "http://localhost:3978/api/messages",
+      "appId": "",
+      "appPassword": "",
+      "id": "1"
+    },
+    {
+      "type": "endpoint",
+      "name": "production",
+      "endpoint": "https://dupontvirtuallibrary-b897.azurewebsites.net/api/messages",
+      "appId": "68f95120-5e28-4cde-a41c-c9bd938b78d0",
+      "appPassword": "gwYROA25324_!dnqzwPIJ*?",
+      "id": "2"
+    },
+    {
+      "type": "appInsights",
+      "instrumentationKey": "356c5af5-bf77-49e7-9c3d-4d56c44c9616",
+      "applicationId": "4f82f898-5942-44ec-8d5f-edc0460de04d",
+      "apiKeys": {},
+      "tenantId": "a9999d0e-0959-4292-baa8-1b3c6d7a296c",
+      "subscriptionId": "252efc3d-08b0-47b6-a006-3196358533c4",
+      "resourceGroup": "ETC-ChatBOT-RG-01",
+      "serviceName": "Win10BotDemo-MS-01y6l3wd",
+      "id": "5"
+    },
+    {
+      "type": "qna",
+      "name": "VirtualLib-kb",
+      "KbId": "6d307a0f-0821-479e-9f18-d1d0097197e6",
+      "subscriptionKey": "083f0ae010a5460abae7b2c844822e6d",
+      "endpointKey": "2876a8e4-7fce-4a97-9ac9-6099b42f0e95",
+      "hostname": "https://dupontvirtuallibrary.azurewebsites.net/qnamaker",
+      "id": "117"
+    },
+    {
+      "type": "luis",
+      "name": "virtuallib-luis",
+      "appId": "99aecd64-5613-4785-b746-0e3af94b32b2",
+      "version": "0.1",
+      "authoringKey": "67b797c2f6e84691b3f7ae83f6c76fba",
+      "spellCheck": "true",
+      "bing-spell-check-subscription-key": "f8ddfe67a058485c8fbe753ea906dcb0",
+      "region": "westus",
+      "id": "119"
+    },
+    {
+      "type": "dispatch",
+      "serviceIds": [
+        "119",
+        "117"
+      ],
+      "name": "nlp-with-dispatchDispatch",
+      "appId": "99aecd64-5613-4785-b746-0e3af94b32b2",
+      "authoringKey": "67b797c2f6e84691b3f7ae83f6c76fba",
+      "spellCheck": "true",
+      "bing-spell-check-subscription-key": "f8ddfe67a058485c8fbe753ea906dcb0",
+      "version": "Dispatch",
+      "region": "westus",
+      "id": "161"
+    }
+  ],
+	"padlock": "",
+	"version": "2.0"
+}

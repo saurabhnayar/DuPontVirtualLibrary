@@ -1,0 +1,70 @@
+
+{
+	"name": "DupontVirtualLibrary",
+  "services": [
+    {
+      "type": "endpoint",
+      "name": "development",
+      "endpoint": "http://localhost:3978/api/messages",
+      "appId": "",
+      "appPassword": "",
+      "id": "1"
+    },
+		{
+			"type": "endpoint",
+			"name": "production",
+			"endpoint": "https://virlib-prod-app.azurewebsites.net/api/messages",
+			"appId": "8552e493-c862-4b1f-95a4-9e35f33a9713",
+			"appPassword": "I?/nS33P*W:1cvV861Rla4U/5-HNCUdY",
+			"id": "2"
+		},
+    {
+      "type": "appInsights",
+      "instrumentationKey": "a865a76c-cd76-4457-b163-df90491878ae",
+      "applicationId": "5c50dac4-8e64-450c-a725-bc2144da966b",
+      "apiKeys": {},
+      "tenantId": "a9999d0e-0959-4292-baa8-1b3c6d7a296c",
+      "subscriptionId": "81a94f49-e251-42f1-8a39-40cc524a299a",
+      "resourceGroup": "IT-WilsonChatbot-DEV",
+      "serviceName": "wilsonchatbot-dev-ai",
+      "id": "5"
+    },
+    {
+      "type": "qna",
+      "name": "VirtualLib-kb",
+      "KbId": "6eaa8017-40e4-46d2-b33a-a1f52d63bd24",
+      "subscriptionKey": "49f306cbf6c84ab989a2742b31fe34c3",
+      "endpointKey": "dd4f45c5-b5f6-49de-b438-9516922c6fdf",
+      "hostname": "https://wilsonchatbot-qnamaker-dev.azurewebsites.net/qnamaker",
+      "id": "117"
+    },
+		{
+			"type": "luis",
+			"name": "virtuallib-luis",
+			"appId": "2436057e-b1ff-434b-a0a2-5ae0ccbed22b",
+			"version": "0.1",
+			"authoringKey": "b6db6284842748fead7f77390f49e112",
+			"spellCheck": "true",
+			"bing-spell-check-subscription-key": "89e2089bd5654f2da377d4f7dc64b391",
+			"region": "eastus",
+			"id": "119"
+		},
+		{
+			"type": "dispatch",
+			"serviceIds": [
+				"119",
+				"117"
+			],
+			"name": "nlp-with-dispatchDispatch",
+			"appId": "2436057e-b1ff-434b-a0a2-5ae0ccbed22b",
+			"authoringKey": "b6db6284842748fead7f77390f49e112",
+			"spellCheck": "true",
+			"bing-spell-check-subscription-key": "89e2089bd5654f2da377d4f7dc64b391",
+			"version": "Dispatch",
+			"region": "eastus",
+			"id": "161"
+		}
+  ],
+	"padlock": "",
+	"version": "2.0"
+}
